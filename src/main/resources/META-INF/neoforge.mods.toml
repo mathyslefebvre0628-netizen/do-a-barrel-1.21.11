@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mixins]]
+config = "barrelroll.mixins.json"
+
+[[mods]]
+modId = "barrelroll"
+version = "39.45"
+displayName = "Do a Barrel Roll"
+description = """
+Microsoft Flight Simulator pour les élytres Minecraft !
+Contrôles en vol élytre :
+  Souris X   → Roll (inclinaison)
+  Souris Y   → Pitch (nez haut/bas, corrigé par le roll)
+  A / D      → Yaw (lacet gauche/droite) + banking automatique
+"""
+
+[[dependencies.barrelroll]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.11,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.barrelroll]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.11,1.22)"
+ordering = "NONE"
+side = "BOTH"
