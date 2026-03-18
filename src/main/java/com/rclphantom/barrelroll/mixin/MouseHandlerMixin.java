@@ -17,7 +17,8 @@ public class MouseHandlerMixin {
         at = @At(
             value = "INVOKE",
             target = "Lnet/minecraft/world/entity/Entity;turn(DD)V"
-        )
+        ),
+        require = 0
     )
     private void wrapTurnPlayer(Entity entity, double yaw, double pitch, Operation<Void> original) {
         if (entity instanceof LocalPlayer player && ElytraFlightHandler.isFlying()) {
